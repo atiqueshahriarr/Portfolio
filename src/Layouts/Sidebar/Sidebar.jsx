@@ -15,7 +15,7 @@ const Sidebar = () => {
         </div>
 
         <div className="w-64 space-y-6">
-          <div className="bg-[url(./my_image.jpg)] bg-cover h-52 rounded-4xl"></div>
+          <div className="bg-[url(/my_image.jpg)] bg-cover h-52 rounded-4xl"></div>
 
           <div className="flex gap-12">
             <div>
