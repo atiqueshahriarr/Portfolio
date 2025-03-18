@@ -7,7 +7,7 @@ import { LuFolderCog, LuPhoneCall } from "react-icons/lu";
 
 const Menubar = () => {
   return (
-    <div className="lg:fixed lg:right-10 lg:top-1/2 lg:-translate-y-1/2 flex  justify-center lg:justify-end w-full z-100">
+    <div className="lg:fixed lg:right-10 lg:top-1/2 lg:-translate-y-1/2 flex  justify-center lg:justify-end w-full z-100 py-4 lg:py-0">
       <div className="lg:border px-4 py-5 rounded-4xl flex lg:flex-col items-center justify-center gap-7 text-lg text-darkgrey">
         <AiOutlineHome className="hover:text-skyBlue transition-all duration-300 cursor-pointer" />
         <FaRegUser className="hover:text-skyBlue transition-all duration-300 cursor-pointer" />
