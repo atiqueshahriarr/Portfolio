@@ -16,33 +16,33 @@ const Skills = () => {
       <Tabs className="">
         <TabList className="w-full flex flex-wrap ">
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             All
           </Tab>
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             Frontend
           </Tab>
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             Backend
           </Tab>
 
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             UI/UX
           </Tab>
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             Tools
           </Tab>
           <Tab
-            className="w-20 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
+            className="px-4 text-center py-2 cursor-pointer focus:outline-none  hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">
             Extras
           </Tab>

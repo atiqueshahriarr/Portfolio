@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { FaCode, FaRegUser } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { GrAchievement } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoMdBook } from "react-icons/io";
@@ -9,12 +9,11 @@ import { TbSquareRoundedLetterA } from "react-icons/tb";
 
 const menuIcons = [
   {id: 1, icon: <AiOutlineHome />, name: "Home", link: "#home"},
-  {id: 2, icon: <FaRegUser />, name: "About", link: "#about"},
-  {id: 3, icon: <IoMdBook />, name: "Education", link: "#education"},
-  {id: 4, icon: <FaCode />, name: "Skills", link: "#skills"},
-  {id: 5, icon: <GrAchievement />, name: "Achievements", link: "#achievements"},
-  {id: 6, icon: <LuFolderCog />, name: "Projects", link: "#projects"},
-  {id: 7, icon: <LuPhoneCall />, name: "Contact", link: "#contact"},
+  {id: 2, icon: <IoMdBook />, name: "Education", link: "#education"},
+  {id: 3, icon: <FaCode />, name: "Skills", link: "#skills"},
+  {id: 4, icon: <GrAchievement />, name: "Achievements", link: "#achievements"},
+  {id: 5, icon: <LuFolderCog />, name: "Projects", link: "#projects"},
+  {id: 6, icon: <LuPhoneCall />, name: "Contact", link: "#contact"},
 ];
 
 const Menubar = () => {
@@ -25,7 +24,6 @@ const Menubar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth <= 1024) {
-    
         if (window.scrollY > lastScrollY) {
           setIsVisible(false);
         } else {
@@ -39,17 +37,16 @@ const Menubar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   const handleSmoothScroll = (e, link) => {
     e.preventDefault();
     const target = document.querySelector(link);
     if (target) {
       window.scrollTo({
-        top: target.offsetTop - 50, // 
+        top: target.offsetTop - 50, //
         behavior: "smooth",
       });
     }
-    setIsOpen(false); 
+    setIsOpen(false);
   };
 
   return (
@@ -67,7 +64,6 @@ const Menubar = () => {
         ))}
       </div>
 
-      
       <div className={`fixed lg:hidden left-0 top-0 w-full bg-bgdark transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="flex justify-between items-center py-4 px-10">
           <div className="relative">
@@ -76,21 +72,20 @@ const Menubar = () => {
           </div>
 
           <HiMenuAlt3
-            className="text-2xl cursor-pointer"
+            className="text-3xl cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           />
         </div>
       </div>
 
-  
       {isOpen && (
-        <ul className="fixed top-16 left-0 w-full bg-bgdark/90 py-4 space-y-4 text-white z-40 shadow-md transition-all duration-300 lg:hidden">
+        <ul className="fixed top-16 left-0 w-full bg-bgdark/90 py-4 flex flex-col items-center justify-center space-y-2 text-white z-40 shadow-md transition-all duration-300 lg:hidden hover:font-bold ">
           {menuIcons.map((item) => (
             <a
               key={item.id}
               href={item.link}
               onClick={(e) => handleSmoothScroll(e, item.link)}
-              className="flex items-center gap-2 px-6 py-2 hover:text-skyBlue transition-all duration-300 cursor-pointer">
+              className="flex items-center gap-2 px-6 py-2 hover:text-skyBlue transition-all duration-300 cursor-pointer hover:gap-4">
               {item.icon} {item.name}
             </a>
           ))}

@@ -12,7 +12,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="pt-10 lg:p-8 rounded-4xl flex flex-col items-center space-y-6 sidebarShadow lg:w-[350px] xl:w-96">
+    <div className="pt-8 lg:p-8 rounded-4xl flex flex-col items-center space-y-6 sidebarShadow lg:w-[350px] xl:w-96">
       <div className="lg:flex justify-between w-full hidden ">
         <div className="relative">
           <h2 className="text-4xl font-semibold">Atique</h2>
@@ -28,14 +28,14 @@ const Sidebar = () => {
 
       <div className="w-64 space-y-8 mt-20 lg:mt-0">
         <div className="bg-[url(/my_image.jpg)] bg-cover h-52 rounded-2xl rotate-3 hover:rotate-0 myImage my-6"></div>
-        <div className="flex gap-12">
-          <div>
-            <h1 className="text-6xl text-skyBlue">5+</h1>
+        <div className="flex justify-between">
+          <div >
+            <h1 className="text-6xl text-skyBlue">15+</h1>
             <p className="text-darkgrey pt-2 text-sm uppercase">Practice Projects</p>
           </div>
           <div className="text-right">
             <h1 className="text-6xl text-skyBlue">1+</h1>
-            <p className="text-darkgrey pt-2 text-sm uppercase">Year of Personal Experience</p>
+            <p className="text-darkgrey pt-2 text-sm uppercase white">Year of Personal Experience</p>
           </div>
         </div>
 
