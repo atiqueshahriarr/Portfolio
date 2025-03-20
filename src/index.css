@@ -10,12 +10,19 @@
         --color-skyBlue: #00bfff;
         --color-darkgrey: #999999;
         --color-borderGray: #575757;
+        --breakpoint-customScreen: 1224px;
 }
 
-.sidebarshadow {
-        box-shadow: 0 0 60px rgba(48, 138, 223, 0.247);
+@media (min-width: 1024px) {
+        .sidebarShadow {
+                box-shadow: 0 0 20px 5px rgba(135, 207, 235, 0.205);
+        }
 }
 
-.myImage {
-        box-shadow: 0 0 20px rgba(48, 138, 223, 0.363);
+.myImage:hover {
+        box-shadow: 0 0 10px 5px rgba(135, 207, 235, 0.205);
+}
+
+.titleShadow {
+        box-shadow: 0 0 10px rgba(135, 207, 235, 0.205);
 }

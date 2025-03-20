@@ -9,7 +9,9 @@ const Contact = () => {
         titleText="Contact"
         iconItem={<LuPhoneCall />}></TopTitle>
       <div>
-        <h5 className="mb-2 text-4xl lg:tet-5xl">Let's Work <span className="text-skyBlue">Together!</span></h5>
+        <h5 className="mb-2 text-4xl lg:tet-5xl">
+          Let's Work <span className="text-skyBlue">Together!</span>
+        </h5>
         <p className="mb-4">Mailto: satique06@gmail.com</p>
 
         <form className="space-y-2">
@@ -40,7 +42,7 @@ const Contact = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="inline-block bg-indigo-500 text-white py-2 px-4 rounded-lg text-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-full">
+              className="inline-block  text-white py-2 px-4 rounded-lg text-sm  focus:outline-none bg-skyBlue  w-full">
               Send
             </button>
           </div>

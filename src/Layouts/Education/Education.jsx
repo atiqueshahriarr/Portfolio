@@ -9,7 +9,7 @@ const Education = () => {
       <TopTitle
         titleText="Educational Milestones"
         iconItem={<IoMdBook />}></TopTitle>
-      <div className="space-y-6">
+      <div className="space-y-10">
         <EducationCard
           eduTitle="BSc. in Computer Science and Engineering"
           eduSubTitle=""

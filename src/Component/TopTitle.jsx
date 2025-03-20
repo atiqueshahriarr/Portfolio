@@ -2,9 +2,9 @@ import React from "react";
 
 const TopTitle = ({titleText, iconItem}) => {
   return (
-    <div className="flex items-center gap-3 text-xl font-medium border w-fit px-6 border-borderGray py-2 rounded-4xl mb-10">
-      <div className=" text-skyBlue ">{iconItem}</div>
-      <h5 className="uppercase text-sm">{titleText}</h5>
+    <div className="flex items-center gap-4  w-fit px-8 py-3 rounded-4xl mb-6 titleShadow">
+      <div className=" text-skyBlue text-2xl">{iconItem}</div>
+      <h5 className="font-medium uppercase">{titleText}</h5>
     </div>
   );
 };

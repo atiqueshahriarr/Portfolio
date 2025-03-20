@@ -1,37 +1,47 @@
 import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsDot } from "react-icons/bs";
-import { IoCodeDownload } from "react-icons/io5";
+import { LuDownload, LuFolderCog } from "react-icons/lu";
 import TopTitle from "../../Component/TopTitle";
 
 const Introduction = () => {
   return (
-    <div className="pt-10 space-y-2">
+    <div
+      className="pt-16"
+      id="home">
       <TopTitle
         titleText="Learn About Me"
         iconItem={<AiOutlineHome />}></TopTitle>
 
-      <h2 className="text-6xl leading-18 -mt-2 ">
+      <h2 className="text-5xl md:text-6xl xl:text-7xl leading-14 md:leading-16 xl:leading-20">
         Hi from <span className="text-skyBlue">Atique</span>, Web Developer & UI/UX Design Enthusiast
       </h2>
 
-      <div className="text-center text-xs flex gap-4 items-end text-darkgrey pt-2">
+      <div className="text-sm flex gap-4 items-end text-darkgrey py-6">
         <span>Hit 24 years</span>
         <BsDot></BsDot>
-        <span>Based in Mirpur-1, Dhaka</span>
+        <span>Based in Mirpur-1, Dhaka, Bangladesh.</span>
       </div>
 
-      <p className="pt-2 text-justify text-sm  leading-6">
-        Passionate about designing intuitive, visually captivating user interfaces and creating seamless, user-first digital experiences. With a strong command of React, TailwindCSS, JavaScript, and Node.js, I’m on a mission to build high-performance websites that not only look great but work
-        flawlessly. Currently exploring the Frontend and UI/UX design world, but my next adventure could take me to new heights in Backend innovation!
+      <p className="text-justify leading-7">
+        Passionate about designing intuitive, visually captivating user interfaces and creating seamless, user-first digital experiences. With a strong command of <span className="text-skyBlue font-semibold">React, TailwindCSS, JavaScript, and Node.js,</span> I’m on a mission to build
+        high-performance websites that not only look great but work flawlessly. Currently exploring the <span className="text-skyBlue font-semibold">Frontend and UI/UX design</span> world, but my next adventure could take me to new heights in 
+        <span className="text-skyBlue font-semibold"> Backend</span> innovation!
       </p>
-      <div className="mt-6 flex gap-4">
-        <button className="bg-skyBlue h-10 w-40 text-black flex items-center justify-center gap-2 text-sm font-semibold rounded-3xl">
-          Get Resume <IoCodeDownload className="text-xl" />
-        </button>
-        <button className="bg-skyBlue h-10 w-40 text-black flex items-center justify-center gap-2 text-sm font-semibold rounded-3xl">
-          Projects <IoCodeDownload className="text-xl" />
-        </button>
+
+      <div className="mt-10 flex gap-6 ">
+        <a
+          href="./Web Developer Resume of Md. Atique Shahriar.pdf"
+          target="_blank"
+          className="bg-skyBlue text-black font-semibold h-10 w-40 rounded-3xl flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
+          Get Resume <LuDownload className="text-xl" />
+        </a>
+
+        <a
+          href="#projects"
+          className="bg-skyBlue text-black font-semibold h-10 w-40 rounded-3xl flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
+          Projects <LuFolderCog className="text-xl" />
+        </a>
       </div>
     </div>
   );

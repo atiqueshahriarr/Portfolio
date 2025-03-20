@@ -1,74 +1,71 @@
-import { FiArrowUpRight } from "react-icons/fi";
-import { RiSlideshow3Line } from "react-icons/ri";
-import { VscGithub } from "react-icons/vsc";
+import { CgArrowTopRight } from "react-icons/cg";
+import { LuGithub } from "react-icons/lu";
+import { PiPlayBold } from "react-icons/pi";
 
 const ProjectCard = ({project}) => {
-  const modalId = `modal-${project.id}`;
-
-  const handleModal = () => {
-    document.getElementById(modalId).showModal();
-  };
-
   return (
-    <div className="p-6 border rounded-xl border-borderGray">
+    <div className="p-5 border rounded-xl border-skyBlue/30  flex flex-col gap-6">
       <div
-        className="bg-cover bg-center h-96 w-full rounded-xl"
-        style={{backgroundImage: `url(${project.image})`}}>
-        {/* Your content here */}
-      </div>
-      <div className="space-y-2">
-        <h1 className="text-lg font-bold">{project.title}</h1>
-        <p className="text-xs font-semibold capitalize text-justify">{project.description}</p>
+        className="bg-cover bg-top h-60 lg:h-72 w-full rounded-xl border-2 border-darkgrey"
+        style={{backgroundImage: `url(${project.image})`}}></div>
 
-        {project.tools && (
-          <div>
-            <h3 className="font-bold text-xs text-borderGray">Used Technologies:</h3>
-            <div className="flex gap-2 mt-1">
-              {project.tools.map((tool, index) => (
-                <img
-                  key={index}
-                  src={tool}
-                  alt={tool}
-                  className="w-7 p-1 rounded-4xl bg-borderGray"
-                />
-              ))}
+      <div>
+        <p className="text-sm font-medium text-skyBlue -mt-3">#{project.category}</p>
+        <div className="flex items-center justify-between">
+          <h1 className="text-xl font-bold">{project.title}</h1>
+
+          <button
+            href=""
+            onClick={() => document.getElementById("my_modal_2").showModal()}>
+            <CgArrowTopRight className="bg-skyBlue text-black text-2xl hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100" />
+          </button>
+        </div>
+        <p className=" capitalize text-justify text-sm font-medium mt-1 text-darkgrey">{project.description}</p>
+
+        <div className="flex flex-wrap gap-2 mt-4 text-darkgrey border-darkgrey">
+          {project.toolsIcons.map((tool, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-1 px-3 py-0.5 border rounded-4xl">
+              <img
+                src={tool}
+                alt={project.toolsNames[index]}
+                className="w-4"
+              />
+              <p className="text-xs">{project.toolsNames[index]}</p>
             </div>
-          </div>
-        )}
-
-        <div className="flex items-center justify-center gap-6 mt-6">
-          <div className="btnProject w-32 h-12 flex items-center justify-center">
-            <a
-              href=""
-              className="z-10 gap-2 flex items-center justify-center"
-              target="_blank">
-              See Details
-              <VscGithub />
-            </a>
-          </div>
-          <div className="btnProject w-32 h-12 flex items-center justify-center">
-            <a
-              href=""
-              className="z-10 gap-2 flex items-center justify-center"
-              target="_blank">
-              Preview
-              <RiSlideshow3Line />
-            </a>
-          </div>
+          ))}
         </div>
       </div>
+      <dialog
+        id="my_modal_2"
+        className="modal ">
+        <div className="modal-box p-8">
+          <h3 className="font-bold text-lg">{project.title}</h3>
+          <h2 className="font-bold text-md pt-3">Website Features:</h2>
+          <p className=" text-justify"> {project.description}</p>
+          <div className="pt-4 flex gap-4">
+            <a
+              href={project.codeLink}
+              target="_blank"
+              className="bg-skyBlue text-black font-semibold h-10 w-30 rounded-lg flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
+              Github <LuGithub className="text-xl" />
+            </a>
 
-      <div className="absolute bottom-2 w-[calc(100%-18px)] opacity-0 group-hover:opacity-100 bg-skyBlue transition-all duration-600 flex justify-between items-center px-4 py-2">
-        <div>
-          <h4 className="text-black text-lg font-bold capitalize">{project.title}</h4>
-          <p className="text-sm">Click to see more details</p>
+            <a
+              href={project.liveLink}
+              className="bg-skyBlue text-black font-semibold h-10 w-30 rounded-lg flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
+              Live <PiPlayBold className="text-xl" />
+            </a>
+          </div>
         </div>
-        <div
-          className="cursor-pointer"
-          onClick={handleModal}>
-          <FiArrowUpRight className="text-lg" />
-        </div>
-      </div>
+
+        <form
+          method="dialog"
+          className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </div>
   );
 };

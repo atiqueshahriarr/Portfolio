@@ -7,7 +7,8 @@ export const projects = [
     description: "The E-Ticketing landing page provides a seamless experience where users can easily select their preferred seats and apply coupons.",
     liveLink: "https://e-ticketing24.netlify.app/",
     codeLink: "https://github.com/atique-shahriar/E-Ticketing-Website",
-    tools: ["./Skills/Tailwind CSS.png", "./Skills/React.png"],
+    toolsIcons: ["./Skills/Tailwind CSS.png", "./Skills/React.png"],
+    toolsNames: ["Tailwind CSS", "React"],
   },
   {
     id: 3,
@@ -17,7 +18,8 @@ export const projects = [
     description: "Land Spark displays property with personalized access to details and management, enhancing user experiences.",
     liveLink: "https://land-spark-react-project.web.app/",
     codeLink: "https://github.com/atique-shahriar/LandSpark",
-    tools: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png"],
+    toolsIcons: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png"],
+    toolsNames: ["Tailwind CSS", "React", "Firebase"],
   },
   {
     id: 4,
@@ -27,7 +29,8 @@ export const projects = [
     description: "Room Booking platform ensures effortless room reservations, secure booking management, and insightful guest reviews.",
     liveLink: "https://stayinn-3d14d.web.app/",
     codeLink: "https://github.com/atique-shahriar/StayInn-Client",
-    tools: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsIcons: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsNames: ["Tailwind CSS", "React", "Firebase", "Node.js", "Express", "MongoDB"],
   },
   {
     id: 5,
@@ -37,7 +40,8 @@ export const projects = [
     description: "Travel Planner provides an intuitive interface for seamless trip planning for personalized travel experiences.",
     liveLink: "https://travel-planner-70a42.web.app/",
     codeLink: "https://github.com/atique-shahriar/TravelPlanner_Client",
-    tools: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsIcons: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsNames: ["Tailwind CSS", "React", "Firebase", "Node.js", "Express", "MongoDB"],
   },
   {
     id: 6,
@@ -47,6 +51,7 @@ export const projects = [
     description: "Contest platform ensures contest management, with easy contest entry and secure login/payment systems for personalized profiles.",
     liveLink: "https://contesthub-fa697.web.app/",
     codeLink: "https://github.com/atique-shahriar/ContestHub_Client",
-    tools: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsIcons: ["./Skills/Tailwind CSS.png", "./Skills/React.png", "./Skills/Firebase.png", "./Skills/Node.js.png", "./Skills/Express.png", "./Skills/MongoDB.png"],
+    toolsNames: ["Tailwind CSS", "React", "Firebase", "Node.js", "Express", "MongoDB"],
   },
 ];
