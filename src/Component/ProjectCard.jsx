@@ -3,8 +3,18 @@ import { LuGithub } from "react-icons/lu";
 import { PiPlayBold } from "react-icons/pi";
 
 const ProjectCard = ({project}) => {
+  const modalId = `modal-${project.id}`;
+
+  const handleModal = () => {
+    document.getElementById(modalId).showModal();
+  };
+
+  const closeModal = () => {
+    document.getElementById(modalId).close();
+  };
+
   return (
-    <div className="p-5 border rounded-xl border-skyBlue/30  flex flex-col gap-6">
+    <div className="p-5 border rounded-xl border-skyBlue/30 bg-gradient-to-br from-black to-blue-950 flex flex-col gap-6">
       <div
         className="bg-cover bg-top h-60 lg:h-72 w-full rounded-xl border-2 border-darkgrey"
         style={{backgroundImage: `url(${project.image})`}}></div>
@@ -14,13 +24,11 @@ const ProjectCard = ({project}) => {
         <div className="flex items-center justify-between">
           <h1 className="text-xl font-bold">{project.title}</h1>
 
-          <button
-            href=""
-            onClick={() => document.getElementById("my_modal_2").showModal()}>
+          <button onClick={handleModal}>
             <CgArrowTopRight className="bg-skyBlue text-black text-2xl hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100" />
           </button>
         </div>
-        <p className=" capitalize text-justify text-sm font-medium mt-1 text-darkgrey">{project.description}</p>
+        <p className="capitalize text-justify text-sm font-medium mt-1 text-darkgrey">{project.description}</p>
 
         <div className="flex flex-wrap gap-2 mt-4 text-darkgrey border-darkgrey">
           {project.toolsIcons.map((tool, index) => (
@@ -37,14 +45,20 @@ const ProjectCard = ({project}) => {
           ))}
         </div>
       </div>
+
       <dialog
-        id="my_modal_2"
-        className="modal ">
+        id={modalId}
+        className="modal">
         <div className="modal-box p-8">
           <h3 className="font-bold text-lg">{project.title}</h3>
           <h2 className="font-bold text-md pt-3">Website Features:</h2>
-          <p className=" text-justify"> {project.description}</p>
-          <div className="pt-4 flex gap-4">
+          <ul className="text-justify list-disc ml-6 space-y-2">
+            {project.features.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <h2 className="font-medium text-md pt-3">Duration: {project.duration}</h2>
+          <div className="pt-6 flex gap-4">
             <a
               href={project.codeLink}
               target="_blank"
@@ -62,8 +76,13 @@ const ProjectCard = ({project}) => {
 
         <form
           method="dialog"
-          className="modal-backdrop">
-          <button>close</button>
+          className="modal-backdrop"
+          onClick={closeModal}>
+          <button
+            type="button"
+            className="btn">
+            Close
+          </button>
         </form>
       </dialog>
     </div>

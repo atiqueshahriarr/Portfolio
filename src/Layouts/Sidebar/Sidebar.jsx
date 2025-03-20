@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { TbSquareRoundedLetterA } from "react-icons/tb";
 
@@ -29,7 +29,7 @@ const Sidebar = () => {
       <div className="w-64 space-y-8 mt-20 lg:mt-0">
         <div className="bg-[url(/my_image.jpg)] bg-cover h-52 rounded-2xl rotate-3 hover:rotate-0 myImage my-6"></div>
         <div className="flex justify-between">
-          <div >
+          <div>
             <h1 className="text-6xl text-skyBlue">15+</h1>
             <p className="text-darkgrey pt-2 text-sm uppercase">Practice Projects</p>
           </div>
@@ -38,7 +38,6 @@ const Sidebar = () => {
             <p className="text-darkgrey pt-2 text-sm uppercase white">Year of Personal Experience</p>
           </div>
         </div>
-
 
         <div className="flex items-center justify-center gap-3 text-darkgrey text-lg">
           {socialLinks.map((social, index) => (
@@ -54,13 +53,13 @@ const Sidebar = () => {
           ))}
         </div>
 
-
         <p className="text-darkgrey text-sm hidden lg:block">&copy; 2025 Atique. All Rights Reserved</p>
       </div>
 
-      <div className="bg-skyBlue w-full max-w-md text-center py-2 rounded-4xl text-bggrey uppercase font-medium">Say Hello</div>
-
-      
+      <div className=" bg-skyBlue text-black font-semibold h-10 w-full max-w-md rounded-3xl flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
+        <FaWhatsapp className="text-xl"/>
+        Say Hello
+      </div>
     </div>
   );
 };
