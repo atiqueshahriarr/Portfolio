@@ -4,7 +4,7 @@ import TopTitle from "../../Component/TopTitle";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <TopTitle
         titleText="Contact"
         iconItem={<LuPhoneCall />}></TopTitle>

@@ -5,7 +5,7 @@ import TopTitle from "../../Component/TopTitle";
 
 const Education = () => {
   return (
-    <div>
+    <div id="education">
       <TopTitle
         titleText="Educational Milestones"
         iconItem={<IoMdBook />}></TopTitle>

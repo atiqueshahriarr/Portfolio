@@ -7,7 +7,7 @@ import TopTitle from "../../Component/TopTitle";
 
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <TopTitle
         titleText="Practice Work"
         iconItem={<LuFolderCog />}></TopTitle>

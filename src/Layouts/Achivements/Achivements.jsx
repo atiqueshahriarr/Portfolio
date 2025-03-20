@@ -11,7 +11,7 @@ import { achivements } from "../../Component/achivements";
 
 const Achivements = () => {
   return (
-    <div>
+    <div id="achievements">
       <TopTitle
         titleText="Achivements"
         iconItem={<GrAchievement />}></TopTitle>

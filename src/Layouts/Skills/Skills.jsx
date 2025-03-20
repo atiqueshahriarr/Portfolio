@@ -8,7 +8,7 @@ import TopTitle from "../../Component/TopTitle";
 
 const Skills = () => {
   return (
-    <div>
+    <div id="skills">
       <TopTitle
         titleText="Tech Strikes"
         iconItem={<FaCode />}></TopTitle>

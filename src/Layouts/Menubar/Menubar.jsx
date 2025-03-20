@@ -9,10 +9,10 @@ import { TbSquareRoundedLetterA } from "react-icons/tb";
 
 const menuIcons = [
   {id: 1, icon: <AiOutlineHome />, name: "Home", link: "#home"},
-  {id: 2, icon: <IoMdBook />, name: "Education", link: "#education"},
-  {id: 3, icon: <FaCode />, name: "Skills", link: "#skills"},
-  {id: 4, icon: <GrAchievement />, name: "Achievements", link: "#achievements"},
-  {id: 5, icon: <LuFolderCog />, name: "Projects", link: "#projects"},
+  {id: 2, icon: <FaCode />, name: "Skills", link: "#skills"},
+  {id: 3, icon: <LuFolderCog />, name: "Projects", link: "#projects"},
+  {id: 4, icon: <IoMdBook />, name: "Education", link: "#education"},
+  {id: 5, icon: <GrAchievement />, name: "Achievements", link: "#achievements"},
   {id: 6, icon: <LuPhoneCall />, name: "Contact", link: "#contact"},
 ];
 
