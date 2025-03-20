@@ -1,5 +1,10 @@
+import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 import "./App.css";
 import Home from "./Layouts/Home/Home";
+// ..
+AOS.init();
 //
 function App() {
   return (

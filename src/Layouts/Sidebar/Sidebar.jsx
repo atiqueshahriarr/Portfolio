@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 import { FaFacebookF, FaLinkedinIn, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { TbSquareRoundedLetterA } from "react-icons/tb";
@@ -12,7 +13,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="pt-8 lg:p-8 rounded-4xl flex flex-col items-center space-y-6 sidebarShadow lg:w-[350px] xl:w-96">
+    <div className="pt-8 lg:p-8 rounded-4xl flex flex-col items-center space-y-6 sidebarShadow lg:w-[350px] xl:w-96 animate__animated animate__fadeInDown">
       <div className="lg:flex justify-between w-full hidden ">
         <div className="relative">
           <h2 className="text-4xl font-semibold">Atique</h2>
@@ -30,11 +31,11 @@ const Sidebar = () => {
         <div className="bg-[url(/my_image.jpg)] bg-cover h-52 rounded-2xl rotate-3 hover:rotate-0 myImage my-6"></div>
         <div className="flex justify-between">
           <div>
-            <h1 className="text-6xl text-skyBlue">15+</h1>
+            <h1 className="text-6xl text-skyBlue"><CountUp end={15} duration={5} />+</h1>
             <p className="text-darkgrey pt-2 text-sm uppercase">Practice Projects</p>
           </div>
           <div className="text-right">
-            <h1 className="text-6xl text-skyBlue">1+</h1>
+            <h1 className="text-6xl text-skyBlue"><CountUp end={1} duration={10} />+</h1>
             <p className="text-darkgrey pt-2 text-sm uppercase white">Year of Personal Experience</p>
           </div>
         </div>
@@ -57,7 +58,7 @@ const Sidebar = () => {
       </div>
 
       <div className=" bg-skyBlue text-black font-semibold h-10 w-full max-w-md rounded-3xl flex items-center justify-center gap-2 hover:bg-transparent hover:text-skyBlue hover:border-2 hover:border-skyBlue cursor-pointer transition-all duration-100">
-        <FaWhatsapp className="text-xl"/>
+        <FaWhatsapp className="text-xl" />
         Say Hello
       </div>
     </div>

@@ -14,7 +14,9 @@ const Skills = () => {
         iconItem={<FaCode />}></TopTitle>
 
       <Tabs className="">
-        <TabList className="w-full flex flex-wrap ">
+        <TabList
+          className="w-full flex flex-wrap "
+          data-aos="zoom-in">
           <Tab
             className="px-4 text-center py-2 cursor-pointer focus:outline-none hover:text-skyBlue hover:font-medium"
             selectedClassName="!bg-skyBlue !text-black !font-medium">

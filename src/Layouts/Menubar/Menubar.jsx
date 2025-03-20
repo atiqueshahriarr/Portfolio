@@ -51,8 +51,7 @@ const Menubar = () => {
 
   return (
     <div>
-      {/* Desktop Menu */}
-      <div className="hidden lg:flex flex-col items-center justify-center gap-7 text-xl text-darkgrey border px-4 py-6 rounded-4xl">
+      <div className="hidden lg:flex flex-col items-center justify-center gap-7 text-xl text-darkgrey border px-4 py-6 rounded-4xl animate__animated animate__backInRight">
         {menuIcons.map((item) => (
           <a
             key={item.id}

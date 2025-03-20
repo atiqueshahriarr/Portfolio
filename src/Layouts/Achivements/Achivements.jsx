@@ -21,7 +21,10 @@ const Achivements = () => {
         className="mySwiper">
         {achivements.map((achivement) => (
           <SwiperSlide key={achivement.id}>
-            <div className=" pb-5">
+            <div className=" pb-5" data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      duration="2000">
               <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 items-center gap-6 p-4 rounded-2xl achivementShadow">
                 <div className="space-y-1">
                   <h3 className="text-xl font-bold mb-3">{achivement.title}</h3>

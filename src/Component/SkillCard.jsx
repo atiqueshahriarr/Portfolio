@@ -2,7 +2,11 @@ import React from "react";
 
 const SkillCard = ({skill}) => {
   return (
-    <div className="flex flex-col items-center gap-1 justify-center">
+    <div className="flex flex-col items-center gap-1 justify-center"
+    data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="1000"
+    >
       <p className="text-white whitespace-nowrap">{skill.name}</p>
 
       <img

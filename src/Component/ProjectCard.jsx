@@ -14,7 +14,8 @@ const ProjectCard = ({project}) => {
   };
 
   return (
-    <div className="p-5 border rounded-xl border-skyBlue/30 bg-gradient-to-br from-black to-blue-950 flex flex-col gap-6">
+    <div className="p-5 border rounded-xl border-skyBlue/30 bg-gradient-to-br from-black to-blue-950 flex flex-col gap-6" data-aos="fade-up"
+    data-aos-duration="1000">
       <div
         className="bg-cover bg-top h-60 lg:h-72 w-full rounded-xl border-2 border-darkgrey"
         style={{backgroundImage: `url(${project.image})`}}></div>
